@@ -13,3 +13,16 @@ body {
     color: #FF1493;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+video {
+    /* Other styling rules */
+    /* ... */
+  
+    /* Prevent right-click context menu */
+    pointer-events: none;
+  }
+  
+  /* Optionally, you can also disable the default browser controls tooltip */
+  video::-webkit-media-controls-enclosure {
+    display: none !important;
+  }
+  
