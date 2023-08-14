@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Page</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <iframe id="video" src="https://www.youtube.com/embed/https://www.youtube.com/watch?v=HjyJu429lC4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Prevent exit using beforeunload event
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = 'Are you sure you want to leave?';
+        });
+    </script>
+</body>
+</html>
